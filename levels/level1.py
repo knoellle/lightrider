@@ -21,8 +21,7 @@ class Lift(Entity):
         self.mat2 = Material(color=(1,1,0))
         self.add(Cube(self.mat1, level=self.level))
         self.add(Lines(self.mat2, [(0,0,0), (0,15,0)], level=self.level))
-        self.circle = Star(self.mat2, 0.3, 0.3, 36)
-        self.circle.set_pos([0,0.5,0])
+        self.circle = self.spawn(Star(self.mat2, 0.3, 0.3, 36), [0,0.5,0])
         self.add(self.circle)
         self.level.colliders.append(LineCollider((0,0,0),(0,15,0),parent=self,callback=self.activate))
 

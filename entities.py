@@ -21,6 +21,13 @@ class Entity(Object3D):
             if isinstance(c, Entity):
                 c.tick(df)
 
+    def spawn(self, child, position=None):
+        if position:
+            child.dpos = Vector3(position)
+
+        self.add(child)
+        return child
+
     def add_to_scene(self, scene):
         scene.add(self)
 

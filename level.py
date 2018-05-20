@@ -44,9 +44,6 @@ class Level(object):
         self.time += df
         v = self.game.inputVector
         self.player.velocity.add(v * df * 10 * Vector3(-1, 0, 1))
-        l = self.player.velocity.length()
-        if l>0:
-            self.player.velocity = self.player.velocity * (1/l)
         for e in self.entities:
             e.tick(df)
         self.camera.pos.x = self.player.pos.x+0.3

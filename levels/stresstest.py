@@ -15,6 +15,7 @@ from collider import LineCollider, SphereCollider
 class StresstestLevel(Level):
     def __init__(self, game):
         super(StresstestLevel, self).__init__(game)
+        self.player.enforce_speed = False
         points = []
         for i in range(12*4000):
             points.append([math.cos(i*2)*i/24000,

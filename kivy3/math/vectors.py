@@ -177,7 +177,6 @@ class BaseVector(list):
         v = self
         if l > 0:
             v=self * (1/l)
-        print(l, v)
         return v
 
     def lerp(self, v, alpha):

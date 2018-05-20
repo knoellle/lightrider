@@ -40,6 +40,7 @@ class TestLevel(Level):
     """docstring for TestLevel"""
     def __init__(self, game):
         super(TestLevel, self).__init__(game)
+        self.player.enforce_speed = False
 
         self.spawn_wireframe_cube([0,-0.5,0], size=[5, 1 ,5])
 
